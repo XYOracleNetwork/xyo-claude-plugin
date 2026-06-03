@@ -1,0 +1,37 @@
+{
+  "name": "xyo-skills",
+  "owner": {
+    "name": "XYO Network",
+    "email": "support@xylabs.com"
+  },
+  "metadata": {
+    "description": "Full-stack agent skills for building dApps on the XL1 blockchain. Covers XYO primitives, XL1 chain operations, toolchain config, and prescriptive design patterns (commit-reveal, indexing, prediction markets).",
+    "version": "1.1.19"
+  },
+  "plugins": [
+    {
+      "name": "xyo-skills",
+      "description": "Full-stack agent skills for building dApps on the XL1 blockchain. Covers XYO primitives, XL1 chain operations, toolchain config, and prescriptive design patterns (commit-reveal, indexing, prediction markets).",
+      "version": "1.1.19",
+      "author": {
+        "name": "XY Labs"
+      },
+      "source": "./",
+      "category": "developer-tools",
+      "tags": [
+        "xl1",
+        "xyo",
+        "blockchain",
+        "dapp",
+        "typescript"
+      ],
+      "keywords": [
+        "xl1",
+        "xyo",
+        "blockchain",
+        "dapp",
+        "typescript"
+      ]
+    }
+  ]
+}
