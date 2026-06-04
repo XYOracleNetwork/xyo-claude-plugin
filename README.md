@@ -1,4 +1,4 @@
-# xyo-skills-claude
+# xyo-claude-plugin
 
 Claude Code marketplace mirror for [`XYOracleNetwork/xyo-skills`](https://github.com/XYOracleNetwork/xyo-skills) — XL1 / XYO development skills for AI coding assistants.
 
@@ -9,13 +9,13 @@ This repository is **auto-generated** from the source repo on each release. Do n
 ### Claude Code CLI
 
 ```shell
-/plugin marketplace add XYOracleNetwork/xyo-skills-claude
+/plugin marketplace add XYOracleNetwork/xyo-claude-plugin
 /plugin install xyo-skills
 ```
 
 ### Claude Desktop app
 
-Open **Customize → Personal plugins → + → Create plugin → Add marketplace**, paste `https://github.com/XYOracleNetwork/xyo-skills-claude`, and install **xyo-skills** from the directory.
+Open **Customize → Personal plugins → + → Create plugin → Add marketplace**, paste `https://github.com/XYOracleNetwork/xyo-claude-plugin`, and install **xyo-skills** from the directory.
 
 ### Team setup (`.claude/settings.json`)
 
@@ -25,7 +25,7 @@ Open **Customize → Personal plugins → + → Create plugin → Add marketplac
     "xyo-skills": {
       "source": {
         "source": "github",
-        "repo": "XYOracleNetwork/xyo-skills-claude"
+        "repo": "XYOracleNetwork/xyo-claude-plugin"
       }
     }
   }
@@ -36,7 +36,7 @@ Open **Customize → Personal plugins → + → Create plugin → Add marketplac
 
 | Tool | Repo |
 |---|---|
-| Codex | [`XYOracleNetwork/xyo-skills-codex`](https://github.com/XYOracleNetwork/xyo-skills-codex) |
+| Codex | [`XYOracleNetwork/xyo-codex-plugin`](https://github.com/XYOracleNetwork/xyo-codex-plugin) |
 | Skills.sh | [`XYOracleNetwork/xyo-skills`](https://github.com/XYOracleNetwork/xyo-skills) |
 
 ## License
