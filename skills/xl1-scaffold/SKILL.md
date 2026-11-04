@@ -2,7 +2,7 @@
 name: xl1-scaffold
 description: Bootstrap a new XL1 application — a single React dApp, a single xl1-service backend, a plain Node.js service/CLI, or a full-stack pnpm monorepo with React + xl1-service + a shared TypeScript library. Activates when the user wants to create, start, bootstrap, initialize, or scaffold a new XL1 project — including when the spec is already concrete (archetype, patterns, network named) and the user wants the scaffold plan laid out before anything runs. Do NOT activate for work in an existing project.
 metadata:
-  version: 1.1.40 # x-release-please-version
+  version: 1.1.41 # x-release-please-version
   layer: 8
 ---
 
@@ -294,6 +294,8 @@ After the scaffold reports success:
    - **Gate 3 — `PRD.md` acceptance criteria** (in the cwd, if present): project-specific positive and negative assertions
 
    This is mandatory, not optional, and it is an **agent-facing completion gate** — it gates whether you stop and report done, independent of any later deploy or release. **If any item across any gate fails, keep iterating until it passes** — do not stop and report partial completion. Fix the failing item, re-walk the relevant gate, and only stop when every applicable gate is fully green. The Gate 2 checklist enumerates exactly the rules and anti-patterns the rest of the skill stack documents, and an unwalked DoD is the most common cause of completed dApps that violate them. In your completion summary, call out each relevant section across all three gates with explicit pass/fail and a one-line note on why. Sections marked "(if applicable)" can be skipped only when truly out of scope (e.g. no commit-reveal in a read-only dashboard); state that they were skipped and why. If the prompt included a seed-phrase `.env` (see "Interpreting the prompt"), the **Headless Verification** section is mandatory — you must have run the verification script and report its outcome, not just check the boxes. **The completion summary must distinguish "chain interactions verified" from "service-derived state verified" as separate facts.** If the dApp exposes derived state through a service (indexer REST API, GraphQL, etc.), the verify run must have round-tripped through that service surface — never via direct hash-lookup synthesis (datalake `get(hashes)`, `viewer.block.payloadsByHash`) — and gated on both `viewer.finalization.headNumber()` and the indexer's `lastIndexedBlock` watermark. Reporting "verified" when only the chain edge was exercised, or rationalizing an empty indexer as "Sequence is slow" without checking the watermark, is the failure mode the [service round-trip](../xl1-testing/headless-testnet-verification.md#verifying-derived-state-through-the-service) exists to prevent.
+
+For later hosting, follow the shared [deployment conventions](https://github.com/ariestools/ariestools-skills/blob/main/skills/xy-development/deployment.md) and dapp-kit's [delivery convention](../xl1-dapp-kit/hosting.md#delivery-convention). Routine prerelease delivery is a branch push, one build and automatic deployment; the implementation completion checks above do not require a full qualification rerun for every deployment. Use the new branch names when configuring the route, and obtain explicit user approval before retaining a nonconforming name because migration is disruptive.
 
 ## Capture the indexer floor block
 
